@@ -19,7 +19,7 @@ def get_remote_ip(host):
     return remote_ip
 
 
-def handle_echo(addr, end, conn):
+def handle_request(addr, end, conn):
     request = conn.recv(BUFFER_SIZE)
     print("The request sending to Google is", request)
     end.sendall(request)
