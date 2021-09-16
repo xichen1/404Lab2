@@ -47,7 +47,7 @@ def main():
 
                 end.connect((remote_ip, port))
 
-                p = Process(target=handle_echo, args=(addr, end, conn))
+                p = Process(target=handle_request, args=(addr, end, conn))
                 p.daemon = True
                 p.start()
                 print("Started process ", p)
